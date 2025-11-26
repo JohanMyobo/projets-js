@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-field">
+            <textarea id="taskInput" placeholder="Ajouter une tâche"></textarea>
+            <i class="uil uil-notes note-icon"></i>
+        </div>
+        <ul class="todo"></ul>
+
+        <div class="pending-tasks">
+            <span class="pending-num">Pas de tâches en cours</span>
+            <button class="clear-button">Tout supprimer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

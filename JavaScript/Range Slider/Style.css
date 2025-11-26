@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #664aff;
+}
+
+.range {
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.sliderValue {
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.sliderValue span {
+    position: absolute;
+    background: #664aff;
+    color: white;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out, left 0.1s ease-in-out;
+    transform: scale(1);
+    left: 50%;
+}
+
+.field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.field .value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #664aff;
+    margin: 0 10px;
+}
+
+.field .value.left {
+    position: absolute;
+    left: 0;
+}
+
+.field .value.right {
+    position: absolute;
+    right: 0;
+}
+
+.field input {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.field input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #664aff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}

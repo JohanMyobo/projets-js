@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+
+    <div class="range">
+        <div class="sliderValue">
+            <span>100</span>
+        </div>
+        <div class="field">
+            <div class="value left">0</div>
+            <input type="range" min="0" max="200" value="100" step="1">
+            <div class="value right">200</div>
+        </div>
+    </div>
+
+    <script>
+        const slideValue = document.querySelector(".sliderValue span");
+        const inputSlider = document.querySelector("input");
+
+        inputSlider.addEventListener("input", () => {
+            let value = inputSlider.value;
+            slideValue.textContent = value;
+
+            let min = inputSlider.min;
+            let max = inputSlider.max;
+            let percent = (value - min) / (max - min) * 100;
+
+            // Ajuster la position de la bulle
+            slideValue.style.left = `calc(${percent}% - 20px)`;
+
+            slideValue.classList.add("show");
+        });
+
+        inputSlider.addEventListener("blur", () => {
+            slideValue.classList.remove("show");
+        });
+    </script>
+
+</body>
+</html>

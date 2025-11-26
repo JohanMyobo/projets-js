@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e3f2fd;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 85px auto 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+    position: relative;
+    height: 64px;
+    width: 100%;
+}
+
+.input-field textarea {
+    height: 64px;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 18px 45px 18px 15px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.input-field textarea:focus {
+    border-color: #4070f4;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.input-field .note-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 24px;
+    color: #707070;
+}
+
+.input-field textarea:focus ~ .note-icon {
+    color: #4070f4;
+}
+
+.todo {
+    max-height: 380px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.list input {
+    height: 16px;
+    min-width: 16px;
+    accent-color: #4070f4;
+}
+
+.list .task {
+    margin: 0 10px;
+    flex-grow: 1;
+    word-break: break-word;
+}
+
+.list input:checked ~ .task {
+    text-decoration: line-through;
+}
+
+.list i {
+    font-size: 20px;
+    color: #707070;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.list:hover i {
+    opacity: 1;
+}
+
+.pending-tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.pending-num {
+    color: #333;
+}
+
+.clear-button {
+    padding: 6px 12px;
+    border: none;
+    background: #4070f4;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.clear-button:hover {
+    background-color: #0e4bf1;
+}

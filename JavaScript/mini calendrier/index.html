@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Calendrier</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="calendar">
+                <div class="left">
+                    <p id="day">Samedi</p>
+                    <p id="date">15</p>
+                </div>
+                <div class="right">
+                    <p id="month">Février</p>
+                    <p id="year">2025</p>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            const date = document.getElementById("date");
+            const day = document.getElementById("day");
+            const month = document.getElementById("month");
+            const year = document.getElementById("year");
+
+            const today = new Date();
+
+            const weekDays = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi",];
+            const allMonths = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+
+            date.innerHTML = (today.getDate()<10?"0":"") + today.getDate();
+            day.innerHTML = weekDays[today.getDay()];
+            month.innerHTML = allMonths[today.getMonth()];
+            year.innerHTML = today.getFullYear();
+
+        </script>
+    </body>
+</html>
